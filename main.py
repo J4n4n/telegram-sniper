@@ -1,15 +1,22 @@
 import asyncio
+
+# حل مشکل Event Loop در پایتون‌های جدید برای پایروگرام
+try:
+    asyncio.get_running_loop()
+except RuntimeError:
+    asyncio.set_event_loop(asyncio.new_event_loop())
+
 from pyrogram import Client
 from pyrogram.errors import FloodWait, UsernameOccupied
 
 api_id = 6
 api_hash = "eb06d4abfb49dc3eeb1aeb98ae0f581e"
 
-# اون متن طولانی که توی کولب کپی کردی رو دقیقاً بین دو تا دابل کوتیشن (" ") پایین بچسبون:
-SESSION_STRING = "BAAAAAYATMQ53OdZYK1UeCJBa2Jzu8pHBvvIJ1lxdmUFZLJVTq843vkwCzzGXqh5UWv67_43YjeSGI0tqaHy9_BH1lCH4pwirv4zwWkKUH-n3-QxXU3AZtM9CTin6fnYshdPRhqdOhp-6jOfYrv6H0mgXX-31eRP9OttnqQUext3Rs3aL8fmtFtcOnZENobrhdo2zCMj7JJnShii7BjdSiYqFxgy6KFDge-HyvTYxIwPYeRLady6D8HETD5LMIgK5wrSiE4nXeOQt-tBQSUa3wdypl1G57bggoLxvCysyZGB3r1e7Y65ZiqmWyUn6A32dd7cdiTButNjGXAEoscsqCcW14YLrAAAAAHbaQvyA"
+# متن سشن خودت را اینجا بگذار
+SESSION_STRING = "BAAAAAYATMQ53OdZYK1UeCJBa2Jzu8pHBvvIJ1lxdmUFZLJVTq843vkwCzzGXqh5UWv67_43YjeSGI0tqaHy9_BH1lCH4pwirv4zwWkKUH-n3-QxXU3AZtM9CTin6fnYshdPRhqdOhp-6jOfYrv6H0mgXX-31eRP9OttnqQUext3Rs3aL8fmtFtcOnZENobrhdo2zCMj7JJnShii7BjdSiYqFxgy6KFDge-HyvTYxIwPYeRLady6D8HETD5LMIgK5wrSiE4nXeOQt-tBQSUa3wdypl1G57bggoLxvCysyZGB3r1e7Y65ZiqmWyUn6A32dd7cdiTButNjGXAEoscsqCcW14YLrAAAAAHbaQvyAA"
 
 chat_id = -1004449203929  # آیدی عددی کانال شما
-target_username = "mimbobaxko"  # آیدی که می‌خواهید اسنایپ کنید
+target_username = "mimbobaxlol"  # آیدی که می‌خواهید اسنایپ کنید
 
 app = Client("my_account", api_id=api_id, api_hash=api_hash, session_string=SESSION_STRING)
 
